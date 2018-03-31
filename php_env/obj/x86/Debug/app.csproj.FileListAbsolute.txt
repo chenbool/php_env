@@ -1,0 +1,7 @@
+C:\Users\Administrator.SC-201710271625\Documents\SharpDevelop Projects\a\a\bin\Debug\app.exe
+C:\Users\Administrator.SC-201710271625\Documents\SharpDevelop Projects\a\a\bin\Debug\app.pdb
+C:\Users\Administrator.SC-201710271625\Documents\SharpDevelop Projects\a\a\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator.SC-201710271625\Documents\SharpDevelop Projects\a\a\obj\x86\Debug\app.MainForm.resources
+C:\Users\Administrator.SC-201710271625\Documents\SharpDevelop Projects\a\a\obj\x86\Debug\app.csproj.GenerateResource.Cache
+C:\Users\Administrator.SC-201710271625\Documents\SharpDevelop Projects\a\a\obj\x86\Debug\app.exe
+C:\Users\Administrator.SC-201710271625\Documents\SharpDevelop Projects\a\a\obj\x86\Debug\app.pdb

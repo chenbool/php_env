@@ -1,0 +1,7 @@
+C:\Users\Administrator.SC-201710271625\Documents\SharpDevelop Projects\a\a\bin\Debug\php.exe
+C:\Users\Administrator.SC-201710271625\Documents\SharpDevelop Projects\a\a\bin\Debug\php.pdb
+C:\Users\Administrator.SC-201710271625\Documents\SharpDevelop Projects\a\a\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator.SC-201710271625\Documents\SharpDevelop Projects\a\a\obj\x86\Debug\php.csproj.GenerateResource.Cache
+C:\Users\Administrator.SC-201710271625\Documents\SharpDevelop Projects\a\a\obj\x86\Debug\php.exe
+C:\Users\Administrator.SC-201710271625\Documents\SharpDevelop Projects\a\a\obj\x86\Debug\php.pdb
+C:\Users\Administrator.SC-201710271625\Documents\SharpDevelop Projects\a\a\obj\x86\Debug\app.MainForm.resources
