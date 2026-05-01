@@ -1,4 +1,4 @@
-﻿#region Using directives
+#region Using directives
 
 using System;
 using System.Reflection;
@@ -6,26 +6,18 @@ using System.Runtime.InteropServices;
 
 #endregion
 
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-[assembly: AssemblyTitle("a")]
-[assembly: AssemblyDescription("")]
+// 程序集的一般信息通过以下属性集控制
+[assembly: AssemblyTitle("php_env")]
+[assembly: AssemblyDescription("PHP 集成环境管理工具")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("a")]
+[assembly: AssemblyProduct("php_env")]
 [assembly: AssemblyCopyright("Copyright 2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
-// This sets the default COM visibility of types in the assembly to invisible.
-// If you need to expose a type to COM, use [ComVisible(true)] on that type.
+// 将程序集中类型的默认 COM 可见性设置为隐藏
 [assembly: ComVisible(false)]
 
-// The assembly version has following format :
-//
-// Major.Minor.Build.Revision
-//
-// You can specify all the values or you can use the default the Revision and 
-// Build Numbers by using the '*' as shown below:
+// 程序集版本号格式: Major.Minor.Build.Revision
 [assembly: AssemblyVersion("1.0.*")]

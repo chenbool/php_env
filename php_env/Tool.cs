@@ -1,24 +1,35 @@
-﻿/*
- * Created by SharpDevelop.
- * User: Administrator
- * Date: 2017/11/4
- * Time: 23:40
- * 
- * To change this template use Tools | Options | Coding | Edit Standard Headers.
+/*
+ * 创建工具: SharpDevelop
+ * 作者: Administrator
+ * 日期: 2017/11/4
+ * 时间: 23:40
  */
 using System;
 using System.Diagnostics;
-	
+
 namespace app
 {
-	// 辅助函数类.
-	public class Tool
-	{
-		public Tool()
-		{
-		}
-		
-        //运行cmd命令
+    /// <summary>
+    /// 工具类
+    /// 提供进程管理、命令执行等辅助功能
+    /// </summary>
+    public class Tool
+    {
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        public Tool()
+        {
+        }
+
+        /// <summary>
+        /// 运行 CMD 命令
+        /// 启动指定的可执行文件并传递命令行参数
+        /// </summary>
+        /// <param name="wwwPath">应用根目录路径</param>
+        /// <param name="cmdExe">可执行文件名</param>
+        /// <param name="cmdStr">命令行参数</param>
+        /// <returns>是否成功启动</returns>
         public static bool RunCmd(string wwwPath,string cmdExe, string cmdStr)
         {
             bool result = false;
@@ -26,15 +37,12 @@ namespace app
             {
                 using (Process myPro = new Process())
                 {
-                    //指定启动进程是调用的应用程序和命令行参数
                     ProcessStartInfo psi = new ProcessStartInfo(wwwPath+cmdExe,cmdStr);
                     myPro.StartInfo = psi;
-//                    myPro.StartInfo.Arguments="cd " + wwwPath;
-                    myPro.StartInfo.UseShellExecute = false; //是否重定向标准输入 
-                    myPro.StartInfo.RedirectStandardError = true;//执行时是不是显示窗口   
-                    myPro.StartInfo.CreateNoWindow = true;//启动 
+                    myPro.StartInfo.UseShellExecute = false;
+                    myPro.StartInfo.RedirectStandardError = true;
+                    myPro.StartInfo.CreateNoWindow = true;
                     myPro.Start();
-//                    myPro.WaitForExit();
                     myPro.Close();
                     result = true;
                 }
@@ -43,25 +51,23 @@ namespace app
             {
             }
             return result;
-        }		
-	
-        
-        /// <summary>  
-        /// 关闭进程名含某某的进程  
-        /// </summary>  
-        /// <param name="processName">进程名</param>  
-        public static void KillProcess(string processName)  
-        {  
-            Process[] myproc = Process.GetProcesses();  
-            foreach (Process item in myproc)  
-            {  
-                if (item.ProcessName.Contains(processName))  
-                {  
-                    item.Kill();  
-                }  
-            }  
-        } 
-        
-        
-	}
+        }
+
+        /// <summary>
+        /// 关闭指定名称的进程
+        /// 根据进程名查找并终止匹配的进程
+        /// </summary>
+        /// <param name="processName">进程名 (支持模糊匹配)</param>
+        public static void KillProcess(string processName)
+        {
+            Process[] myproc = Process.GetProcesses();
+            foreach (Process item in myproc)
+            {
+                if (item.ProcessName.Contains(processName))
+                {
+                    item.Kill();
+                }
+            }
+        }
+    }
 }
