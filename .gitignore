@@ -1,0 +1,6 @@
+.idea/
+php_env/obj/
+php_env/bin/Debug/
+*.user
+*.suo
+*.cache

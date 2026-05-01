@@ -68,9 +68,56 @@ php_env/
 
 - Windows 操作系统
 - .NET Framework 4.0+
-- Nginx
-- PHP (5.3 ~ 7.0)
-- MySQL
+- 本程序目录下需要包含以下目录结构
+
+## 依赖目录结构
+
+将 PHP、MySQL、Nginx 等依赖放到程序根目录，目录结构如下：
+
+```
+php_env/
+├── php_env/                      # 主程序目录
+│   ├── app.exe                   # 主程序
+│   ├── server/                   # Web 服务器
+│   │   ├── nginx/                # Nginx 目录
+│   │   │   ├── conf/             # 配置文件
+│   │   │   │   └── nginx.conf
+│   │   │   ├── nginx.exe
+│   │   │   └── ...
+│   │   └── caddy/                # Caddy 目录 (可选)
+│   │       ├── Caddyfile
+│   │       ├── caddy.exe
+│   │       └── ...
+│   ├── php/                      # PHP 多个版本
+│   │   ├── php-5.3.29/
+│   │   │   ├── php-cgi.exe
+│   │   │   ├── php.ini
+│   │   │   └── ...
+│   │   ├── php-5.4.45/
+│   │   ├── php-5.6.27/
+│   │   └── php-7.0.x/            # 根据版本号命名
+│   ├── mysql/                    # MySQL 数据库
+│   │   └── bin/
+│   │       ├── mysqld.exe
+│   │       ├── my.ini
+│   │       └── ...
+│   ├── www/                      # 网站根目录
+│   │   └── index.php
+│   └── ...
+```
+
+### 目录说明
+
+| 目录 | 说明 | 必需 |
+|:---|:---|:---:|
+| `server/nginx/` | Nginx 服务器 | 是 |
+| `server/caddy/` | Caddy 服务器 | 否 |
+| `php/php-5.3.29/` | PHP 5.3.29 | 是 |
+| `php/php-5.4.45/` | PHP 5.4.45 | 是 |
+| `php/php-5.6.27/` | PHP 5.6.27 | 是 |
+| `php/php-7.0.x/` | PHP 7.0 | 否 |
+| `mysql/bin/` | MySQL 数据库 | 是 |
+| `www/` | 网站根目录 | 是 |
 
 ## Nginx 配置
 
